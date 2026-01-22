@@ -1,0 +1,14 @@
+<h2 id="toc">Table of Contents</h2>
+
+<div class="toc">
+  <ul>
+    {% for item in toc %}
+      <li>
+        <a href="#{{ item.id }}">
+          {% if item.prefix %}<strong>{{ item.prefix }}</strong>{% endif %}
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
