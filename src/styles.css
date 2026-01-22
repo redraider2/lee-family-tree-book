@@ -1,0 +1,356 @@
+/* ==========================
+   The American Tapestry — Styles
+   ========================== */
+
+/* ---- Base Reset ---- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #fbfaf7;
+  --paper: #ffffff;
+  --ink: #171717;
+  --muted: #5c5c5c;
+  --rule: #e7e3dc;
+
+  --accent: #2a4d69;
+  --accent2: #4b86b4;
+
+  --max: 900px;
+}
+
+/* ---- Page ---- */
+body {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 3rem 1.25rem;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--bg), #fff);
+}
+
+/* Main centered page container */
+.page {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--paper);
+  padding: 2.5rem 3rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  isolation: isolate;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  z-index: -1;
+}
+
+.hero-inner {
+  padding: 3rem 2rem;
+}
+
+.hero h1,
+.hero h2 {
+  color: #fff;
+}
+
+.hero h2 {
+  border-bottom: none;
+  margin-top: 0.75rem;
+}
+
+.hero .small {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Optional "paper" feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0, 0, 0, 0.03), transparent 35%),
+    radial-gradient(circle at 90% 30%, rgba(0, 0, 0, 0.03), transparent 35%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ---- Headings ---- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  letter-spacing: 0.02em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+  text-align: center;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+h4 {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-top: 2rem;
+  color: #2b2b2b;
+}
+
+/* ---- Paragraphs / Text ---- */
+p {
+  margin: 0 0 1.15rem 0;
+  font-size: 1.06rem;
+  text-rendering: optimizeLegibility;
+}
+
+.small {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.center {
+  text-align: center;
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(42, 77, 105, 0.45);
+}
+
+a:hover {
+  color: var(--accent2);
+  border-bottom-style: solid;
+}
+
+/* ---- Table of Contents ---- */
+.toc {
+  margin-top: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.toc li:last-child {
+  border-bottom: none;
+}
+
+.toc a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.2rem 0;
+  border-bottom: none;
+}
+
+/* ---- Embedded Story Images ---- */
+.figure-inline {
+  max-width: 520px;
+  margin: 1.5rem auto;
+}
+
+.figure-left {
+  max-width: 420px;
+  float: left;
+  margin: 0.5rem 1.5rem 1rem 0;
+}
+
+.figure-right {
+  max-width: 420px;
+  float: right;
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+/* Clear floats after embedded images */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Slightly smaller captions for inline images */
+.figure-inline figcaption,
+.figure-left figcaption,
+.figure-right figcaption {
+  font-size: 0.9rem;
+}
+
+/* ---- Figures / Images ---- */
+figure {
+  margin: 1.75rem auto;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+/* ---- Section Navigation (mini TOC) ---- */
+.mini-toc {
+  margin: 1.5rem auto 2rem;
+  background: rgba(42, 77, 105, 0.06);
+  border: 1px solid rgba(42, 77, 105, 0.18);
+  border-radius: 14px;
+  padding: 1rem 1rem 0.75rem;
+}
+
+.mini-toc ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.mini-toc li {
+  margin: 0.4rem 0;
+}
+
+/* ---- Utility / Notes ---- */
+.note {
+  background: #fff7e6;
+  border: 1px solid #ffe1a8;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  color: #403014;
+}
+
+/* ---- Page Break (for printing / PDF) ---- */
+.page-break {
+  page-break-before: always;
+  break-before: page;
+  margin-top: 3rem;
+}
+
+/* ---- Print Styling ---- */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .figure-left,
+  .figure-right {
+    float: none;
+    margin: 1.25rem auto;
+  }
+
+  .hero {
+    min-height: auto;
+    color: #000;
+  }
+
+  .hero-video,
+  .hero-overlay {
+    display: none;
+  }
+
+  .toc,
+  figure,
+  .mini-toc {
+    box-shadow: none !important;
+  }
+
+  a {
+    color: black;
+    border-bottom: none;
+    text-decoration: none;
+  }
+
+  #music-toggle {
+    display: none !important;
+  }
+}
+
+/* ---- Background Music Toggle ---- */
+#music-toggle {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 999;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+#music-toggle:hover {
+  background: rgba(255, 255, 255, 1);
+}

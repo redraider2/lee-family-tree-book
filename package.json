@@ -1,0 +1,13 @@
+{
+  "name": "lee-family-tree-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The American Tapestry: Four Centuries of the Families Behind John Wayne Lee",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+[
+  { "id": "introduction", "title": "Introduction" },
+  { "id": "chapter-1", "prefix": "Chapter 1:", "title": "The Colonial Roots – Lee, Ludwell, and Harrison" },
+  { "id": "chapter-2", "prefix": "Chapter 2:", "title": "The Frontier Push – Brittain, Rhyne, and the Southern Migration" },
+  { "id": "chapter-3", "prefix": "Chapter 3:", "title": "The Southern & Appalachian Lines – Rogers, Wilder, and Penland" },
+  { "id": "chapter-3a", "prefix": "Chapter 3A:", "title": "Joshua Wiley Jones and the Biltmore Connection" },
+  { "id": "chapter-4", "prefix": "Chapter 4:", "title": "The Myrick Line – From Virginia to Texas and Oklahoma" },
+  { "id": "chapter-5", "prefix": "Chapter 5:", "title": "Oklahoma & Texas Roots – Ed Myrick, Lillian Rogers, and the Modern Family" },
+  { "id": "parents", "title": "The Lee Family: My Parents" },
+  { "id": "chapter-6", "prefix": "Chapter 6:", "title": "The Inheritor – The Life and Journey of John Wayne Lee" },
+  { "id": "epilogue", "prefix": "Epilogue:", "title": "The Road Still Opening" },
+  { "id": "appendix-a", "prefix": "Appendix A:", "title": "Genealogical Summaries" },
+  { "id": "appendix-b", "prefix": "Appendix B:", "title": "Photo Documentary" },
+  { "id": "author-bio", "title": "Author Biography" }
+]
